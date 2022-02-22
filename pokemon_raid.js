@@ -258,7 +258,7 @@ function show_pokemon_info(id_num) { //Used to display Pokémon recommendations
 	var total_time_taken=timer_duration-final_timer;
 	var total_damage_dealt=total_health-final_boss_health;
 
-	if (final_boss_health<0){  //If the boss has been defeated
+	if (final_boss_health<=0){  //If the boss has been defeated
 		document.getElementById('bonus_text').innerHTML="This team will win in "+Math.floor(total_time_taken)+" seconds."
 	}
 	else if (final_timer<=0) { //If the timer has run out
