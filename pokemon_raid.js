@@ -73,7 +73,7 @@ function simulate_complete_battle(user_pokemon,foe_hp,timer) { //Used to simulat
 		timer -=0.1; //Reduce the timer 
 		time_survived_by_poke +=0.1; //Increase the number of time survived by this Pokémon
 		if (user_pokemon[0]['user_stamina']<=0) { //If the user's Pokémon has fainted
-			user_attacking_turns+=2; //Attack cooldown from death 
+			user_attacking_turns=0; //Reset attacking turns 
 			user_pokemon.shift(); //Remove this Pokémon from the team and switch to the next one 
 			user_energy=0; //Reset user energy to 0 
 			survivability[index]=time_survived_by_poke; //Record the time survived by this Pokémon 
@@ -172,9 +172,9 @@ function show_pokemon_info(id_num) { //Used to display Pokémon recommendations
 	}
 	
 	var text_to_show=""; //Init recommendations as blank
-	var foe_defense=(Number(pokemon_info[id_num]["Defense"])+15)*0.7903; //Calculate Raid Boss defense stat
+	var foe_defense=(Number(pokemon_info[id_num]["Defense"])+15)*0.73; //Calculate Raid Boss defense stat
 	var foe_types=pokemon_info[id_num]["Type"].split("#"); //Get Raid Boss typing
-	var foe_attack=(Number(pokemon_info[id_num]["Attack"])+15)*0.7903; //Calculate Raid Boss attack stat
+	var foe_attack=(Number(pokemon_info[id_num]["Attack"])+15)*0.73; //Calculate Raid Boss attack stat
 	
 	saved_pokemon.forEach(function (item, index) { //Loop through each Pokémon in the user's collection
 
