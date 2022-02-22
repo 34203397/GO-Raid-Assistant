@@ -83,6 +83,10 @@ function simulate_complete_battle(user_pokemon,foe_hp,timer) { //Used to simulat
 			damage_dealt_by_poke=0 //Reset the total damage output for this Pokémon
 		}
 	}
+
+	survivability[index]=time_survived_by_poke; //Record the time survived by this Pokémon 
+	tdo[index]=damage_dealt_by_poke; //Record the total damage output of this Pokémon 
+
 	return([foe_hp,timer,tdo,survivability]); //Return final outcome
 }
 
