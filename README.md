@@ -1,4 +1,4 @@
 # GO Raid Assistant
-Luke,Danny,Dylan G group project
-Task today Do work
 https://34203397.github.io/GO-Raid-Assistant/ 
+
+A tool used to calculate optimal counters in Pokémon GO raids.
